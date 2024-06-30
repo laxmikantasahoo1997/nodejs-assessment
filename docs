@@ -1,0 +1,38 @@
+//packages info
+- express for creating RESTful APIs.
+- mongoose for MongoDB object modeling.
+- multer for handling file uploads.
+- xlsx for parsing Excel files.
+- os for CPU utilization tracking
+- node-schedule for scheduling messages
+
+//cpu monitoring
+start the server - pm2 start server.js --name server
+start the monitor - pm2 start monitor.js --name monitor
+check status - pm2 list
+view logs - pm2 logs
+command to check CPU usage- node monitor.js
+
+
+//API  to upload the attached XLSX/CSV data into MongoDB
+POST - http://localhost:5000/api/uploadFile
+payload - form-data (type:file,and select file)
+
+
+//Search API to find policy info with the help of the username.
+GET - http://localhost:5000/api/policies/search?username=Lura Lucca
+payload - form-data (type:file,and select file)
+
+// API to provide aggregated policy by each user
+GET - http://localhost:5000/api/policies/aggregated
+
+//API to test schedule message
+POST - http://localhost:5000/api/message/scheduleMessage
+payload - 
+{"message":"My first message",
+    "day":"2024-06-30",
+    "time":"12:02"}
+
+
+
+
